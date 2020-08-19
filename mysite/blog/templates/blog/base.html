@@ -1,0 +1,47 @@
+{% load blog_tags %}
+<!-- Załaduj znacznik szblonu -->
+{% load static %}
+<!-- Załaduj pliki statyczne -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>
+	{% block title %}
+	{% endblock %}
+	</title>
+	<!-- Nie rozumiemi sensu tego wpisu skoro nic nie zmienia i nic nie oznacza -->
+  <link rel="stylesheet" href="{% static "blogg/blog.css" %}" type="text/css"/>
+  <!-- Skorzytaj z pliku css -->
+</head>
+
+
+<body>
+  <div class="body">
+	{% block content %}
+	{% endblock %}
+	<!-- Główna zawartość strony -->
+  </div>
+  
+  <div class="sidebar">
+  <!-- Jeżeli wpiszemy id przestanie współdziać z css -->
+	<h2> Mój blog </h2>
+	<p> To jest mój blog. Dotychczas opublikowałem {% total_posts %} postów. </p>
+	<h3>Najnowsze posty</h3>
+	{% show_latest_posts 3 %}
+	
+	<h3>Najczęściej komentowane posty</h3>
+	{% get_most_commented_posts as most_commented_posts %}
+	<ul>
+		{% for post in most_commented_posts %}
+			<li>
+				<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+  </div>
+  </body>
+
+</html>

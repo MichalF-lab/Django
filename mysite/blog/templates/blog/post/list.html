@@ -1,0 +1,48 @@
+{% extends "blog/base.html" %}
+
+{% load blog_tags %}
+
+{% block title %}Mój blog{% endblock %}
+
+{% block content %}
+	<h1>
+		Mój blog
+		<!-- Tytuł wyswietlany na kżdej stronie z listą postów -->
+	</h1>
+	
+	{% if tag %}
+	<!-- Jeżeli tag != none -->
+		<h2>
+			Posty oznaczone tagiem "{{ tag.name }}"
+			<!-- Napis na każdej liście z okresłonym tagiem -->
+		</h2>
+	{% endif %}
+	
+	{% for post in posts %}
+	<!-- Iteracja -->
+		<h2>
+		
+			<a href="{{ post.get_absolute_url }}">
+			<!-- Link do posta -->
+				{{ post.title }}
+				<!-- Nazwa posta -->
+			</a>
+			
+				<p class="tags">
+					Tagi:
+					{% for tag in post.tags.all %}
+						<a href="{% url "blog:post_list_by_tag" tag.slug %}">
+							{{ tag.name }}
+						</a>
+						{% if not forloop.last %}, {% endif %}
+					{% endfor %}
+				</p>
+		</h2>
+		<p class="date">
+			Opublikowany {{ post.publish }} przez {{ post.author }}
+		</p>
+		{{ post.body|markdown|truncatewords_html:30 }}
+		<!-- truncatewords_html skraca ilosć wyrazów -->
+	{% endfor %}
+	{% include "pagination.html" with page=posts %}
+{% endblock %}
