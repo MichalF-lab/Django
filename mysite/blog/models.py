@@ -47,6 +47,7 @@ class Post(models.Model):
                              self.publish.strftime('%m'),
                              self.publish.strftime('%d'),
                              self.slug])
+        # Pozwala stworzyć URL obiektu
 
 
 class Comment(models.Model):
