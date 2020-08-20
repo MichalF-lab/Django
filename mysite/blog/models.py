@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from taggit.managers import TaggableManager
 
+
 # Na blogu mają pojawiać się tylko posty ze statusem published  *Post.published.all()
 class PublishedManager(models.Manager):
     def get_queryset(self):
