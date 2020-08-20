@@ -29,6 +29,9 @@
   <!-- Jeżeli wpiszemy id przestanie współdziać z css -->
 	<h2> Mój blog </h2>
 	<p> To jest mój blog. Dotychczas opublikowałem {% total_posts %} postów. </p>
+	<p>
+		<a href="{% url "blog:post_feed" %}">Subskrybuj kanał</a>
+	</p>
 	<h3>Najnowsze posty</h3>
 	{% show_latest_posts 3 %}
 	
