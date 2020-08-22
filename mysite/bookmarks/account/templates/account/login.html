@@ -1,4 +1,4 @@
-{% extands base.html %}
+{% extends "base.html" %}
 
 {% block title %} Logowanie {% endblock %}
 
@@ -6,4 +6,12 @@
     <h1>
         Logowanie
     </h1>
+    <p>
+        Wypełni poniższy formulaż aby się zalogować
+    </p>
+    <form action="." method="post">
+        {{ form.ap_s }}
+        {% csrf_token%}
+        <p><input type="submit" value="zaloguj"></p>
+    </form>
 {% endblock%}

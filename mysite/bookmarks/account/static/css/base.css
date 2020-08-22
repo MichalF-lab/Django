@@ -1,0 +1,34 @@
+
+h1, h2
+{
+    font-family: 'Lobster', cursive;
+	color: DodgerBlue;
+}
+p
+{
+	font-family: 'Lobster', cursive;
+	
+}
+
+.date
+{
+    color: #828282;
+}
+
+.sidebar
+{
+	float: right;
+	background-color: #DDDDDD;
+}
+
+.comment
+{
+	width: 500px;
+	background-color: LightGray;
+}
+
+.body
+{
+	width: 700px;
+	float: left;
+}
