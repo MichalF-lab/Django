@@ -1,34 +1,17 @@
+#header
+{
+	background-color: #128870;
+	color: white;
+	padding: 20px;
+	margin: 0px;
+	font-family: Verdana;
+	position:  sticky;
+	overflow: hidden;
+}
+
 
 h1, h2
 {
-    font-family: 'Lobster', cursive;
-	color: DodgerBlue;
-}
-p
-{
-	font-family: 'Lobster', cursive;
-	
-}
-
-.date
-{
-    color: #828282;
-}
-
-.sidebar
-{
-	float: right;
-	background-color: #DDDDDD;
-}
-
-.comment
-{
-	width: 500px;
-	background-color: LightGray;
-}
-
-.body
-{
-	width: 700px;
-	float: left;
+    font-family: 'Arial';
+	color: black;
 }
