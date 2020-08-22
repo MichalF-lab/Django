@@ -11,6 +11,7 @@
     </p>
     <form action="." method="post">
         {{ form.as_p }}
+        <!-- Tworzy pola tekstowe -->
         {% csrf_token%}
         <p><input type="submit" value="Zaloguj"></p>
     </form>
