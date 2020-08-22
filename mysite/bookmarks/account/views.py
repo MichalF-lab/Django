@@ -6,14 +6,19 @@ from .forms import LoginForm
 
 def user_login(request):
     if request.method == 'POST':
+    # Jeżeli urzytkownik zarząda metody POST
         form = LoginForm(request.POST)
+        # Pobierz dane
         if form.is_valid():
+        # Czy dane spełniają normy
             cd = form.cleaned_data
             user = authenticate(username=cd['username'],
                                 password=cd['password'])
-            if user in not None:
+            # Negocjacja z bazą danych czy dane są poprawne
+            if user is not None:
                 if user.is_active:
                     login(request, user)
+                    # Rozpoczyna sesje użytkownika
                     return HttpResponse('Uwierzytelnienie zakończyło się sukcesem.')
                 else:
                     return HttpResponse('Konto jest zablokowane.')
