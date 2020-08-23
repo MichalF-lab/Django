@@ -1,4 +1,4 @@
-#header
+.header
 {
 	background-color: #128870;
 	color: white;
@@ -15,3 +15,22 @@ h1, h2
     font-family: 'Arial';
 	color: black;
 }
+
+.menu
+{
+	min-width: 50px;
+	font-size: 199px;
+	float: right;
+}
+
+.logo
+{
+	float: left;
+	width: 90px;
+}
+
+.user
+{
+
+}
+
