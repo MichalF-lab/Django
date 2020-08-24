@@ -1,4 +1,4 @@
-.header
+#header
 {
 	background-color: #128870;
 	color: white;
@@ -19,8 +19,8 @@ h1, h2
 .menu
 {
 	min-width: 50px;
-	font-size: 199px;
-	float: right;
+	font-size: 30px;
+	float: left;
 }
 
 .logo
