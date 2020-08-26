@@ -32,7 +32,7 @@ def user_login(request):
 
 @login_required
 # Jeżeli użytkownik poprawnie się zalogował
-# Jeżeli nie parametr next przekieruje go strony logowania
+# Strona do której próbował uzyskać dostęp zostanie zapisana w zminnnej next
 def dashboard(request):
     return render(request,'account/dashboard.html',{'section': 'dashboard'})
     # dasboard panel głowny
