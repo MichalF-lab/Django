@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'dashboard'
 # Redirect przeadresowywanie
+# Wskazujemy przekierowanie po zalegowaniu gdy nie otrzymalismy parametru next
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
