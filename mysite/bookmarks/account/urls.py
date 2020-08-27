@@ -32,4 +32,5 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(),
         name='password_reset_complete'),
     # Adresy URL przeznaczone do obsługi procedury zerowania hasła.
+    path('register/', views.register, name='register'),
 ]
