@@ -33,4 +33,5 @@ urlpatterns = [
         name='password_reset_complete'),
     # Adresy URL przeznaczone do obsługi procedury zerowania hasła.
     path('register/', views.register, name='register'),
+    # Patch dla zakładania nowego konta użytkownika
 ]
