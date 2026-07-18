@@ -1,0 +1,19 @@
+# Wirtualne środowisko
+env/
+venv/
+.venv/
+
+# Bajtkod Pythona
+__pycache__/
+*.py[cod]
+
+# Django
+*.log
+local_settings.py
+
+# IDE
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
